@@ -1,23 +1,39 @@
-import React, { useState } from 'react';
-import { img1, img2, img3 } from '../assets/images';
+import React, { useState } from "react";
+import { img1, img2, img3 } from "../assets/images";
+import { useResponsiveness, BREAKPOINTS } from "../hooks/useResponsiness";
 
 const images = [
   {
     src: img1,
-    text: 'First image'
+    text: "First image",
   },
   {
     src: img2,
-    text: 'Second image'
+    text: "Inventory Management",
   },
   {
     src: img3,
-    text: 'Third image'
-  }
+    text: "Third image",
+  },
 ];
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Use the custom responsiveness hook inside the component
+  const isMobile = useResponsiveness("mobile");
+  const isTablet = useResponsiveness("tablet");
+  const isDesktop = useResponsiveness("desktop");
+
+  // Adjust image height based on screen size
+  let imageHeight = "h-[600px]";
+  if (isMobile) {
+    imageHeight = "h-[400px]";
+  } else if (isTablet) {
+    imageHeight = "h-[600px]";
+  } else if (isDesktop) {
+    imageHeight = "h-[800px]";
+  }
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -32,48 +48,37 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className='relative w-full max-w-8xl'>
+    <div className="relative w-full max-w-8xl">
       {/* Images */}
-      <div className='relative h-[800px] w-full rounded-lg overflow-hidden'>
+      <div className={`relative ${imageHeight} w-full rounded-lg overflow-hidden`}>
         <img
           src={images[currentIndex].src}
           alt="Slide"
-          className='w-full h-full object-cover'
+          className="w-full h-full object-cover"
         />
         {/* Text Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <p className="text-white text-lg font-semibold">{images[currentIndex].text}</p>
+          <p className="text-white text-lg font-semibold">
+            {images[currentIndex].text}
+          </p>
         </div>
-
-        {/* Left Arrow */}
-        <button
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200"
-          onClick={prevSlide}
-        >
-          &#8592;
-        </button>
 
         {/* Right Arrow */}
         <button
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-md hover:bg-gray-200"
-          onClick={nextSlide}
+          className=" w-16 ml-9 right-0 transform -translate-y-1/2 text-white p-2 rounded-full shadow-md hover:bg-red-600 border"
+          onClick={prevSlide}
         >
           &#8594;
         </button>
 
-        {/* Dots for navigation */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${index === currentIndex ? 'bg-gray-800' : 'bg-gray-400'}`}
-              onClick={() => setCurrentIndex(index)}
-            ></div>
-          ))}
-        </div>
+        {/* Left Arrow */}
+        <button
+          className="w-16 mr-11 right-10 transform -translate-y-1/2 bg-transparent text-white p-2 rounded-full shadow-md hover:bg-red-600 border"
+          onClick={nextSlide}
+        >
+          &#8592;
+        </button>
       </div>
-      {/* Example filler content to trigger scrolling */}
-      <div className="h-[1000px] bg-gray-100">Some additional content below</div>
     </div>
   );
 };
