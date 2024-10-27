@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { img1, img2, img3 } from "../assets/images";
 import { useResponsiveness } from "../hooks/useResponsiness";
 
@@ -30,12 +30,13 @@ const ImageSlider = () => {
   let imageHeight = "h-[600px]";
   if (isMobile) imageHeight = "h-[400px]";
   else if (isTablet) imageHeight = "h-[600px]";
-  else if (isDesktop) imageHeight = "h-[800px]";
+  else if (isDesktop) imageHeight = "h-[8000px]";
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+    
   };
 
   const nextSlide = () => {
@@ -44,13 +45,24 @@ const ImageSlider = () => {
     setCurrentIndex(newIndex);
   };
 
+  // SLide show image
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 7000); // Change slide every 3 seconds
+  
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+  
+
+
   return (
     <div className="relative w-full max-w-8xl">
-      <div className={`relative ${imageHeight} w-full h-[860px] rounded-lg overflow-hidden`}>
+      <div className={`relative ${imageHeight} w-full  rounded-lg overflow-hidden  h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]`}>
         <img
           src={images[currentIndex].src}
           alt="Slide"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-all duration-500 ease-in-out"
         />
 
         {/* Single Text Overlay */}
@@ -88,6 +100,7 @@ const ImageSlider = () => {
             &#8592;
           </button>
         </div>
+
       </div>
     </div>
   );

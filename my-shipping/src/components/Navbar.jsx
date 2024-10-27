@@ -1,6 +1,8 @@
 import React from 'react';
 import { logo } from '../assets/images';
-import Pages from '../layout/Pages'
+import Pages from '../layout/Pages';
+import Herosection from '../layout/Herosection';
+
 
 
 
@@ -49,6 +51,7 @@ const Navbar = () => {
         </div>
       </div>
       <Pages />
+      <Herosection/>
     </nav>
   );
 }
