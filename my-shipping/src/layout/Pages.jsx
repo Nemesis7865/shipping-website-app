@@ -57,7 +57,8 @@ const ImageSlider = () => {
 
 
   return (
-    <div className="relative w-full max-w-8xl">
+    <div className="relative w-full max-w-8xl ">
+      {/* Image div */}
       <div className={`relative ${imageHeight} w-full  rounded-lg overflow-hidden  h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px]`}>
         <img
           src={images[currentIndex].src}
