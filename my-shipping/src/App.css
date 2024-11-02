@@ -1,4 +1,17 @@
 html, body {
-  height: 5000vh;
+  height: 550vh;
+}
+.Testimonial{
+  top: 7rem;
+  position: relative;
+
+}
+
+@media(max-width:320px){
+  .Testimonial{
+    top: 14rem;
+    margin-top: 50rem;
+    position: relative;
   
+  }
 }
