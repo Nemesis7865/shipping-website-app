@@ -1,8 +1,7 @@
 import React from 'react';
 import { logo } from '../assets/images';
 import Pages from '../layout/Pages';
-import Herosection from '../layout/Herosection';
-import Testimonial from '../layout/Testimonials'
+import { Link } from 'react-router-dom';
 
 
 
@@ -41,12 +40,12 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className={`lg:flex lg:items-center lg:space-x-4 ${isOpen ? 'block' : 'hidden'} transition duration-300 ease-in-out`}>
             <ul className='flex flex-col lg:flex-row lg:space-x-4'>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Home</a></li>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>About Us</a></li>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Services</a></li>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Track Package</a></li>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Help Center</a></li>
-              <li><a href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Contact Us</a></li>
+              <li><Link href="/" className='block px-2 py-2 hover:bg-gray-200 transition'>Home</Link></li>
+              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>About Us</Link></li>
+              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Services</Link></li>
+              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Track Package</Link></li>
+              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Help Center</Link></li>
+              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Contact Us</Link></li>
             </ul>
           </div>
         </div>
