@@ -103,7 +103,7 @@ const Herosection = () => {
         </div>
 
         {/* Text Layout */}
-        <div className="absolute mt-80 w-full h-auto bg-stone-800 flex items-center flex-col p-4 sm:p-6 md:p-8 lg:h-[632px] lg:mt-96 ">
+        <div className="absolute mt-80 w-full h-auto bg-stone-800 flex items-center flex-col p-4 sm:p-6 md:p-8 lg:h-[900px] lg:mt-96 xl:h-[700px]">
           <h2 className="text-yellow-400 opacity-70 font-semibold text-lg sm:text-xl md:text-2xl pt-4 sm:pt-6 md:pt-9">
             Why Choose Us
           </h2>
@@ -112,7 +112,7 @@ const Herosection = () => {
           </h1>
 
           {/* Extra Container Divs */}
-          <div className="flex flex-col md:flex-row py-8 md:py-16 gap-5 justify-center items-center md:w-auto md:flex-wrap">
+          <div className="flex flex-col md:flex-row py-8 md:py-16 gap-5 justify-center items-center md:w-auto md:flex-wrap lg:py-12">
             <div className="w-full md:w-64 lg:h-72 bg-slate-100 flex flex-col items-center p-4 ">
               <FaHandshake className="text-yellow-500 text-3xl mb-4" />
               <h3 className="text-center font-bold text-lg text-neutral-700 opacity-90 pb-4">

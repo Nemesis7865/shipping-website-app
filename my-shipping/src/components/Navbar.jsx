@@ -1,8 +1,7 @@
 import React from 'react';
 import { logo } from '../assets/images';
-import Pages from '../layout/Pages';
+// import Pages from '../layout/Pages';
 import { Link } from 'react-router-dom';
-
 
 
 
@@ -10,6 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
+    <>
     <nav className=' top-0 left-0 right-0 p-2 w-full z-50 bg-white text-black shadow-md'>
       <div className='flex justify-center items-center'>
         {/* Logo and Navigation Container */}
@@ -37,23 +37,24 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Navigation Links */}
+          {/* Navigation as */}
           <div className={`lg:flex lg:items-center lg:space-x-4 ${isOpen ? 'block' : 'hidden'} transition duration-300 ease-in-out`}>
             <ul className='flex flex-col lg:flex-row lg:space-x-4'>
-              <li><Link href="/" className='block px-2 py-2 hover:bg-gray-200 transition'>Home</Link></li>
-              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>About Us</Link></li>
-              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Services</Link></li>
-              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Track Package</Link></li>
-              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Help Center</Link></li>
-              <li><Link href="#" className='block px-2 py-2 hover:bg-gray-200 transition'>Contact Us</Link></li>
+              <li><Link to="/" className='block px-2 py-2 hover:bg-gray-200 transition'>Home</Link></li>
+              <li><Link to="/aboutus" className='block px-2 py-2 hover:bg-gray-200 transition'>About Us</Link></li>
+              <li><Link to="/services" className='block px-2 py-2 hover:bg-gray-200 transition'>Services</Link></li>
+              <li><Link to="/trackpackage" className='block px-2 py-2 hover:bg-gray-200 transition'>Track Package</Link></li>
+              <li><Link to="/helpcenter" className='block px-2 py-2 hover:bg-gray-200 transition'>Help Center</Link></li>
+              <li><Link to="contactus" className='block px-2 py-2 hover:bg-gray-200 transition'>Contact Us</Link></li>
             </ul>
           </div>
         </div>
       </div>
-      <Pages />
-      {/* <Herosection/> */}
+      
+  
       
     </nav>
+    </>
   );
 }
 

@@ -8,7 +8,7 @@ const Testimonials = () => {
         <div className="w-full my-11">
           {/* Text layout */}
           <div className="text-center px-4">
-            <h3 className="text-yellow-500 text-2xl md:text-3xl font-bold py-4 md:py-6">
+            <h3 className="text-yellow-500 text-2xl md:text-3xl font-bold py-4 md:py-6 lg:mt-40 xl:mt-16 ">
               Testimonials
             </h3>
             <h1 className="text-3xl md:text-5xl font-bold text-neutral-700 opacity-90">
