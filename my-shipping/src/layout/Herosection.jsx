@@ -28,7 +28,8 @@ const Herosection = () => {
 
         {/* Track Button */}
         <button
-          className="mt-6 md:mt-0 w-48 lg:w-52 h-16 md:h-14 bg-orange-400 hover:bg-orange-300 text-black font-bold rounded transition duration-300 ease-in-out px-4"
+          className="mt-6 md:mt-0 w-48 lg:w-52 h-16 md:h-14 bg-orange-400 hover:bg-orange-300
+           text-black font-bold rounded transition duration-300 ease-in-out px-4"
           onClick={() => alert("Track your shipment")}
         >
           Track your shipment

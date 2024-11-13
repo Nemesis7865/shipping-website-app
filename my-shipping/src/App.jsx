@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Testimonials from "./layout/Testimonials";
 import Herosection from "./layout/Herosection";
-import AboutUs from "./nav-section/AboutUs";
+import Aboutus from "./nav-section/Aboutus"
 import HelpCenter from "./nav-section/HelpCenter";
 import TrackPackage from "./nav-section/TrackPackage";
 import Services from "./nav-section/Services";
@@ -22,7 +22,7 @@ function App() {
         <Routes>
           {/* Main Route for Home */}
           <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/helpcenter" element={<HelpCenter />} />
           <Route path="/trackpackage" element={<TrackPackage />} />
