@@ -7,12 +7,29 @@ import {
   service4,
   service5,
   service6,
-  about
+  about,
+  nemesis
+  
 } from "../assets/images";
 import { BiRightArrowAlt } from "react-icons/bi";
+import { useResponsiveness } from "../hooks/useResponsiness";
+import Counter from "../counter/Counter";
+
 
 
 const Services = () => {
+  const isMobile = useResponsiveness("mobile");
+  const isTablet = useResponsiveness("tablet");
+  const isDesktop = useResponsiveness("desktop");
+
+  const counters = [
+    {label: "Counteries Worldwide", target: "150"},
+    {label: "Years Experience", target: "15"},
+    {label: "Commounity We Deliver To", target: "15"},
+    {label: "Agents Strenght", target: "2530"}
+
+  ]
+
   return (
     <>
       {/* Image section */}
@@ -164,7 +181,7 @@ const Services = () => {
           </h1>
           <p className="opacity-60 text-sm lg:mt-5">
             We provide bonded and highly specialized warehousing as part of an
-            integrated supply chain, with a range of value-added services for
+            integrated supply chain, with a range of target-added services for
             manufacturers and retailers.
           </p>
           <button className="w-36 sm:w-40 h-10 sm:h-11 bg-amber-400 mt-6 rounded flex justify-center items-center">
@@ -215,77 +232,128 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Our Core Value */}
-      <div className="my-20 bg-black w-full h-auto lg:h-[1000px] px-4 sm:px-8 lg:px-0 ">
-        {/* Text div */}
-        <div className="flex flex-col items-center text-center px-4">
-          <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl pt-12 sm:pt-20">
-            Our Core Value
-          </h1>
-          <p className="text-white py-6 sm:py-8 md:py-11 font-bold text-sm sm:text-base md:text-lg">
-            Our values guide how we behave. It is reflected in how we work and
-            in our relationships with others. Our brand values are
-          </p>
-        </div>
+    
 
-        {/* First row of values */}
-        <ul className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-20 lg:space-x-40">
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">
-              Customer Centricity
-            </h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              We make connections through our daily activities, people are at
-              the centre of our activities hence we believe in creating
-              communities.
-            </p>
-          </li>
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">Dynamism</h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              The customer is at the centre of all our activities and business
-              decisions. Everything we do is guided by what the customer needs.
-            </p>
-          </li>
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">Innovation</h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              The customer is at the centre of all our activities and business
-              decisions. Everything we do is guided by what the customer needs.
-            </p>
-          </li>
-        </ul>
+      <div
+  className={`relative ${isMobile ? "h-[1500px]" : isTablet ? "h-[600px]" : "h-[800px] lg:h-[1000px]"} flex justify-center bg-cover bg-center bg-fixed mt-24 `} 
+  style={{ backgroundImage: `url(${nemesis})` }}
+>
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black opacity-70"></div>
 
-        {/* Second row of values */}
-        <ul className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-20 lg:space-x-40 py-12">
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">Integrity</h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              Our customers trust us with their most valuable items. Our
-              integrity ensures we deliver what we said we would at the agreed
-              time.
-            </p>
-          </li>
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">Community</h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              The customer is at the centre of all our activities and business
-              decisions. Everything we do is guided by what the customer needs.
-            </p>
-          </li>
-          <li className="text-center max-w-xs px-4">
-            <h2 className="text-white text-lg font-bold">Excellence</h2>
-            <p className="text-white py-4 opacity-60 text-xs sm:text-sm">
-              We understand the importance of exceptional work. We are not only
-              efficient but effective. Our customers can trust us with hard work
-              delivered outstandingly at all times.
-            </p>
-          </li>
-        </ul>
+  {/* Text layout */}
+  <div className="relative bg-black w-full px-4 sm:px-8 lg:px-0 py-12 lg:h-[600px] h-[930px] flex flex-col items-center">
+    <div className="text-center max-w-3xl">
+      <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl opacity-95">
+        Our Core Target
+      </h1>
+      <p className="text-white py-6 sm:py-8 md:py-11 font-bold text-sm sm:text-base md:text-lg opacity-95">
+        Our targets guide how we behave. It is reflected in how we work and in our relationships with others. Our brand targets are:
+      </p>
+    </div>
 
-        
+    {/* Targets List */}
+    <ul className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16 mt-6">
+      {[
+        { title: "Customer Centricity", text: "We make connections through our daily activities, with people at the center of our activities." },
+        { title: "Dynamism", text: "We ensure every action is customer-focused to meet their needs effectively." },
+        { title: "Innovation", text: "Innovation drives all our decisions, aiming to fulfill customer needs." }
+      ].map((item, index) => (
+        <li key={index} className="text-center max-w-xs px-4">
+          <h2 className="text-white text-lg font-bold opacity-95">{item.title}</h2>
+          <p className="text-white py-4 opacity-60 text-xs sm:text-sm">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+
+    {/* Second row of targets */}
+    <ul className="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8 lg:space-x-16 mt-8">
+      {[
+        { title: "Integrity", text: "We deliver on promises, with integrity that fosters trust." },
+        { title: "Community", text: "Our actions build and support communities through customer-centered work." },
+        { title: "Excellence", text: "We maintain excellence in all services, ensuring high standards consistently." }
+      ].map((item, index) => (
+        <li key={index} className="text-center max-w-xs px-4">
+          <h2 className="text-white text-lg font-bold opacity-95">{item.title}</h2>
+          <p className="text-white py-4 opacity-60 text-xs sm:text-sm">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+
+    {/* Circle Counters */}
+    <div className="flex flex-col sm:flex-row justify-center items-center space-y-6 sm:space-y-0 sm:space-x-6 lg:mt-56 mt-20 opacity-95">
+      {counters.map((counter, index) => (
+        <Counter
+          key={index}
+          targetNumber={counter.target}
+          label={counter.label}
+        />
+      ))}
+    </div>
+  </div>
+</div>
+
+
+      {/* footer */}
+      <footer class="bg-neutral-900 text-white py-10 my-20">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap gap-8 md:gap-16 lg:gap-8 text-center md:text-left lg:flex lg:justify-center lg:items-center">
+      
+      {/* <!-- About Us Section --> */}
+      <div class="w-full md:w-1/4">
+        <h3 class="text-lg font-semibold text-yellow-500">ABOUT US</h3>
+        <p class="mt-4 text-sm opacity-80">
+          We provide a portfolio of full logistic solutions which includes, but is not limited to International and Domestic express delivery, Freight Forwarding, Integrated Logistics Solutions, Information and Document Management Solutions, Warehousing, Packaging Services, Food Delivery, Agriculture Logistics and E-commerce Solutions.
+        </p>
       </div>
       
+      {/* <!-- Quick Links Section --> */}
+      <div class="w-full md:w-1/4">
+        <h3 class="text-lg font-semibold text-yellow-500">QUICK LINKS</h3>
+        <ul class="mt-4 space-y-2 text-sm opacity-80">
+          <li><a href="#" class="hover:text-yellow-500">Home</a></li>
+          <li><a href="#" class="hover:text-yellow-500">About us</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Services</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Track package</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Help Centre</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Contact us</a></li>
+        </ul>
+      </div>
+      
+      {/* <!-- Services Section --> */}
+      <div class="w-full md:w-1/4">
+        <h3 class="text-lg font-semibold text-yellow-500">SERVICES</h3>
+        <ul class="mt-4 space-y-2 text-sm opacity-80">
+          <li><a href="#" class="hover:text-yellow-500">Air freight</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Customs House Brokerage</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Ocean freight</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Project Cargo</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Road and Rail</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Warehousing</a></li>
+        </ul>
+      </div>
+      
+      {/* <!-- Help Center Section --> */}
+      <div class="w-full md:w-1/4">
+        <h3 class="text-lg font-semibold text-yellow-500">HELP CENTER</h3>
+        <ul class="mt-4 space-y-2 text-sm opacity-80">
+          <li><a href="#" class="hover:text-yellow-500">Damaged or missing parcel</a></li>
+          <li><a href="#" class="hover:text-yellow-500">I'm not in</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Missed a delivery?</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Parcel returns</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Problems or complaints</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Redelivery</a></li>
+          <li><a href="#" class="hover:text-yellow-500">Tracking</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    {/* <!-- Footer Bottom Section --> */}
+    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm opacity-80">
+      © 2024 Courier Plus Express Delivery Service. All Rights Reserved
+    </div>
+  </div>
+</footer>
     </>
   );
 };

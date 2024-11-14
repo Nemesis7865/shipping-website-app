@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { about, abouta, aboutb, aboutc } from "../assets/images";
 import Counter from "../counter/Counter";
-import { FaHandshake, FaClock, FaBolt, FaShieldAlt } from 'react-icons/fa';
-
+import { FaHandshake, FaClock, FaBolt, FaShieldAlt } from "react-icons/fa";
 
 const Aboutus = () => {
   const counters = [
@@ -208,117 +207,206 @@ const Aboutus = () => {
 
       {/* Core Competencies */}
       <div className="w-full h-auto px-6 lg:px-36 py-12">
-      <h1 className="text-3xl lg:text-5xl font-bold text-center text-neutral-600 mb-12">
-        Core Competencies
-      </h1>
+        <h1 className="text-3xl lg:text-5xl font-bold text-center text-neutral-600 mb-12">
+          Core Competencies
+        </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Process */}
-        <div className="flex items-start space-x-4">
-          <FaHandshake className="text-5xl text-yellow-500 flex-shrink-0" />
-          <div>
-            <h4 className="font-bold text-lg text-neutral-600">Process</h4>
-            <p className="text-sm text-neutral-700">
-              We have been defined by the process objective for the company which is to have 100% accountability for all customers' packages, 98% error-free invoicing on express, and 100% error-free invoicing for logistics and freight.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Process */}
+          <div className="flex items-start space-x-4">
+            <FaHandshake className="text-5xl text-yellow-500 flex-shrink-0" />
+            <div>
+              <h4 className="font-bold text-lg text-neutral-600">Process</h4>
+              <p className="text-sm text-neutral-700">
+                We have been defined by the process objective for the company
+                which is to have 100% accountability for all customers'
+                packages, 98% error-free invoicing on express, and 100%
+                error-free invoicing for logistics and freight.
+              </p>
+            </div>
+          </div>
+
+          {/* Prompt */}
+          <div className="flex items-start space-x-4">
+            <FaClock className="text-5xl text-yellow-500 flex-shrink-0" />
+            <div>
+              <h4 className="font-bold text-lg text-neutral-600">Prompt</h4>
+              <p className="text-sm text-neutral-700">
+                This is the swift delivering of parcels and other services to
+                customers.
+              </p>
+            </div>
+          </div>
+
+          {/* Responsiveness */}
+          <div className="flex items-start space-x-4">
+            <FaBolt className="text-5xl text-yellow-500 flex-shrink-0" />
+            <div>
+              <h4 className="font-bold text-lg text-neutral-600">
+                Responsiveness
+              </h4>
+              <p className="text-sm text-neutral-700">
+                We will at any time know what the customers' changing needs are
+                and be able to deliver on the customers' needs within the
+                shortest possible time.
+              </p>
+            </div>
+          </div>
+
+          {/* Security */}
+          <div className="flex items-start space-x-4">
+            <FaShieldAlt className="text-5xl text-yellow-500 flex-shrink-0" />
+            <div>
+              <h4 className="font-bold text-lg text-neutral-600">Security</h4>
+              <p className="text-sm text-neutral-700">
+                We will ensure 100% accountability and security for all clients’
+                packages.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Prompt */}
-        <div className="flex items-start space-x-4">
-          <FaClock className="text-5xl text-yellow-500 flex-shrink-0" />
-          <div>
-            <h4 className="font-bold text-lg text-neutral-600">Prompt</h4>
-            <p className="text-sm text-neutral-700">
-              This is the swift delivering of parcels and other services to customers.
-            </p>
+      {/*Footer  */}
+      <footer class="bg-neutral-900 text-white py-10 mt-40 lg:mt-32">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap gap-8 md:gap-16 lg:gap-8  text-center md:text-left lg:flex lg:justify-center lg:items-center">
+            {/* <!-- About Us Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">ABOUT US</h3>
+              <p class="mt-4 text-sm opacity-80">
+                We provide a portfolio of full logistic solutions which
+                includes, but is not limited to International and Domestic
+                express delivery, Freight Forwarding, Integrated Logistics
+                Solutions, Information and Document Management Solutions,
+                Warehousing, Packaging Services, Food Delivery, Agriculture
+                Logistics and E-commerce Solutions.
+              </p>
+            </div>
+
+            {/* <!-- Quick Links Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">QUICK LINKS</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Track package
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Help Centre
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* <!-- Services Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">SERVICES</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Air freight
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Customs House Brokerage
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Ocean freight
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Project Cargo
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Road and Rail
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Warehousing
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* <!-- Help Center Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">HELP CENTER</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Damaged or missing parcel
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    I'm not in
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Missed a delivery?
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Parcel returns
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Problems or complaints
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Redelivery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Tracking
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* <!-- Footer Bottom Section --> */}
+          <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm opacity-80">
+            © 2024 Courier Plus Express Delivery Service. All Rights Reserved
           </div>
         </div>
-
-        {/* Responsiveness */}
-        <div className="flex items-start space-x-4">
-          <FaBolt className="text-5xl text-yellow-500 flex-shrink-0" />
-          <div>
-            <h4 className="font-bold text-lg text-neutral-600">Responsiveness</h4>
-            <p className="text-sm text-neutral-700">
-              We will at any time know what the customers' changing needs are and be able to deliver on the customers' needs within the shortest possible time.
-            </p>
-          </div>
-        </div>
-
-          {/* Footer */}
-
-        {/* Security */}
-        <div className="flex items-start space-x-4">
-          <FaShieldAlt className="text-5xl text-yellow-500 flex-shrink-0" />
-          <div>
-            <h4 className="font-bold text-lg text-neutral-600">Security</h4>
-            <p className="text-sm text-neutral-700">
-              We will ensure 100% accountability and security for all clients’ packages.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="bg-neutral-900 text-white py-10 mt-40 lg:mt-32">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-wrap gap-8 md:gap-16 lg:gap-8  text-center md:text-left lg:flex lg:justify-center lg:items-center">
-      
-      {/* <!-- About Us Section --> */}
-      <div class="w-full md:w-1/4">
-        <h3 class="text-lg font-semibold text-yellow-500">ABOUT US</h3>
-        <p class="mt-4 text-sm opacity-80">
-          We provide a portfolio of full logistic solutions which includes, but is not limited to International and Domestic express delivery, Freight Forwarding, Integrated Logistics Solutions, Information and Document Management Solutions, Warehousing, Packaging Services, Food Delivery, Agriculture Logistics and E-commerce Solutions.
-        </p>
-      </div>
-      
-      {/* <!-- Quick Links Section --> */}
-      <div class="w-full md:w-1/4">
-        <h3 class="text-lg font-semibold text-yellow-500">QUICK LINKS</h3>
-        <ul class="mt-4 space-y-2 text-sm opacity-80">
-          <li><a href="#" class="hover:text-yellow-500">Home</a></li>
-          <li><a href="#" class="hover:text-yellow-500">About us</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Services</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Track package</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Help Centre</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Contact us</a></li>
-        </ul>
-      </div>
-      
-      {/* <!-- Services Section --> */}
-      <div class="w-full md:w-1/4">
-        <h3 class="text-lg font-semibold text-yellow-500">SERVICES</h3>
-        <ul class="mt-4 space-y-2 text-sm opacity-80">
-          <li><a href="#" class="hover:text-yellow-500">Air freight</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Customs House Brokerage</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Ocean freight</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Project Cargo</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Road and Rail</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Warehousing</a></li>
-        </ul>
-      </div>
-      
-      {/* <!-- Help Center Section --> */}
-      <div class="w-full md:w-1/4">
-        <h3 class="text-lg font-semibold text-yellow-500">HELP CENTER</h3>
-        <ul class="mt-4 space-y-2 text-sm opacity-80">
-          <li><a href="#" class="hover:text-yellow-500">Damaged or missing parcel</a></li>
-          <li><a href="#" class="hover:text-yellow-500">I'm not in</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Missed a delivery?</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Parcel returns</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Problems or complaints</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Redelivery</a></li>
-          <li><a href="#" class="hover:text-yellow-500">Tracking</a></li>
-        </ul>
-      </div>
-    </div>
-    
-    {/* <!-- Footer Bottom Section --> */}
-    <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm opacity-80">
-      © 2024 Courier Plus Express Delivery Service. All Rights Reserved
-    </div>
-  </div>
-</footer>
+      </footer>
     </>
   );
 };

@@ -14,3 +14,4 @@ export {default as service3} from "./Service3.jpeg";
 export {default as service4} from "./Service4.jpeg";
 export {default as service5} from "./Service5.jpeg";
 export {default as service6} from "./Service6.jpeg";
+export {default as nemesis} from "./nemesis.jpg"
