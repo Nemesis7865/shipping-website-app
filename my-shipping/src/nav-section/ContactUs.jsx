@@ -20,8 +20,9 @@ const ContactUs = () => {
       </div>
 
       {/* Reach out  */}
-      <div className='w-full h-auto lg:px-48 mt-16 lg:mt-28 px-12'>
+      <div className='w-full h-auto lg:px-48 mt-16 lg:mt-28 px-12 '>
          {/* Text */}
+         
         <h1 className='font-bold text-2xl text-neutral-600 my-8 md:my-9 sm:my-7 lg:text-4xl'>
           Reach out
         </h1>
@@ -39,18 +40,24 @@ const ContactUs = () => {
 
         {/* form */}
         <div className='flex flex-col mt-16 lg:mt-28'>
-        <label className=''>
+        <label className='font-bold pb-4'>
           Name
         </label>
         <input
             type="text"
-            className="flex-grow px-4 py-2 border border-t-zinc-600 border-r-zinc-600 focus:ring-zinc-400 focus:ring-2 rounded focus:outline-none  text-sm sm:text-base"
+            className="flex-grow px-4 py-2 border border-t-zinc-600 border-r-zinc-900 focus:ring-zinc-400 focus:ring-2 rounded focus:outline-none  text-sm sm:text-base"
           />
-          <label>
+          <label className='pt-10 font-bold pb-4'>
             Email
           </label>
+          <input
+            type="text"
+            className="flex-grow px-4 py-2 border border-t-zinc-600 border-r-zinc-900 focus:ring-zinc-400 focus:ring-2 rounded focus:outline-none  text-sm sm:text-base"
+          />
         </div>
+      
       </div>
+
     </>
   )
 }
