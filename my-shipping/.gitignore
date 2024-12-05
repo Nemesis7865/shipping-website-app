@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-*.git rm -r --cached src/maps/
+# Ignoring maps.jsx
+src/maps.jsx
+
