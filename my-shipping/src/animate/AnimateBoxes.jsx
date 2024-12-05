@@ -16,278 +16,305 @@ const AnimateBoxes = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen bg-transparent overflow-hidden relative ">
-      {/* Blue Box */}
-      <div
-        className={`w-96 h-80 absolute bg-white top-10 transform transition-all duration-1000 ease-in-out ${
-          animate ? "left-20 opacity-100" : "-left-64 opacity-0"
-        }`}
-      >
-        <FaSearchLocation className="text-4xl text-neutral-600 " />
-        <h2 className="font-bold text-2xl text-neutral-600 py-7">Tracking</h2>
-        {/* list div 1 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">Where is my parcel?</p>
-        </div>
-
-        {/* list div 2 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            What is my tracking ID?
-          </p>
-        </div>
-
-        {/* list div 3 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Why is there no tracking against my parcel?
-          </p>
-        </div>
-
-        {/* list div 4 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            My tracking hasn't updated, what should I do?
-          </p>
-        </div>
-
-        <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
-          See all
-          <FaArrowRightLong />
-        </button>
-      </div>
-
-      {/* Green Box 1 */}
-      <div
-        className={`w-96 h-80 bg-white absolute top-10 transform transition-all duration-1000 ease-in-out delay-200 ${
-          animate ? "right-20 opacity-100" : "-right-64 opacity-0"
-        }`}
-      >
-        <RiContactsFill className="text-4xl text-neutral-600 " />
-        <h2 className="font-bold text-2xl text-neutral-600 py-7">I'm not in</h2>
-        {/* list div 1 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            I'm not in, what will happen to my parcel?
-          </p>
-        </div>
-
-        {/* list div 2 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Can you leave my parcel in a safe place?
-          </p>
-        </div>
-
-        {/* list div 3 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Can you leave my parcel with a neighbour?
-          </p>
-        </div>
-
-        {/* list div 4 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Can I call the agent directly?
-          </p>
-        </div>
-
-        <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
-          See all
-          <FaArrowRightLong />
-        </button>
-      </div>
-
-      {/* Red Box */}
-      <div
-        className={`w-96 h-80 bg-white absolute top-10 transform transition-all duration-1000 ease-in-out delay-400 ${
-          animate ? "opacity-100" : "translate-y-20 opacity-0"
-        }`}
-      >
-        <FaBox className="text-4xl text-neutral-600 " />
-        <h2 className="font-bold text-2xl text-neutral-600 py-7">
-          Missed delivery
-        </h2>
-        {/* list div 1 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Can i call agent directly?
-          </p>
-        </div>
-
-        {/* list div 2 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            Can your agent call back?
-          </p>
-        </div>
-
-        {/* list div 3 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            My parcel has been delivered to the wrong adress
-          </p>
-        </div>
-
-        {/* list div 4 */}
-        <div className="flex ">
-          <FaCircleDot className="text-xs" />
-          <p className="text-sm px-2 text-neutral-600">
-            I dont't have a calling card
-          </p>
-        </div>
-
-        <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
-          See all
-          <FaArrowRightLong />
-        </button>
-      </div>
-
-      {/* animated left down div */}
-
-      <div
-        className={`w-[1390px] h-[450px] bg-white absolute bottom-0 gap-24 flex flex-row transform transition-all duration-1000 ease-in-out delay-200 ${
-          animate ? "right-1 opacity-100" : "-right-64 opacity-0"
-        }`}
-      >
-        <div className="w-96 h-auto">
-          <FaDirections className="text-4xl text-neutral-600 flex" />
-          <h2 className="font-bold text-2xl text-neutral-600 py-7">
-            Redelivery
-          </h2>
-          {/* list div 1 */}
-          <div className="flex ">
-            <FaCircleDot className="text-sm" />
-            <p className="text-sm px-2 text-neutral-600">
-              How do I rearrange my parcel delivery?
-            </p>
-          </div>
-
-          {/* list div 2 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              Tracking shows a missed delivery attempt but I was in
-            </p>
-          </div>
-
-          {/* list div 3 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              Can the driver come back?
-            </p>
-          </div>
-
-          {/* list div 4 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              My parcel was delivered to the wrong address
-            </p>
-          </div>
-          <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
+    <>
+    <div className="flex items-center justify-center lg:h-screen bg-transparent overflow-hidden relative px-4">
+      {/* Boxes Container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Blue Box */}
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <FaSearchLocation className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">Tracking</h2>
+          {[
+            "Where is my parcel?",
+            "What is my tracking ID?",
+            "Why is there no tracking against my parcel?",
+            "My tracking hasn't updated, what should I do?",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
             See all
             <FaArrowRightLong />
           </button>
         </div>
 
-        {/* div 2 */}
-        <div className="w-96 h-auto">
-          <MdDangerous className="text-4xl text-neutral-600 " />
-          <h2 className="font-bold text-2xl text-neutral-600 py-7">
+        {/* Green Box */}
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out delay-200 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <RiContactsFill className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">I'm not in</h2>
+          {[
+            "I'm not in, what will happen to my parcel?",
+            "Can you leave my parcel in a safe place?",
+            "Can you leave my parcel with a neighbour?",
+            "Can I call the agent directly?",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
+            See all
+            <FaArrowRightLong />
+          </button>
+        </div>
+
+        {/* Red Box */}
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out delay-400 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <FaBox className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">Missed delivery</h2>
+          {[
+            "Can I call the agent directly?",
+            "Can your agent call back?",
+            "My parcel has been delivered to the wrong address",
+            "I don’t have a calling card",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
+            See all
+            <FaArrowRightLong />
+          </button>
+        </div>
+
+        {/* Additional Boxes */}
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out delay-600 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <FaDirections className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">Redelivery</h2>
+          {[
+            "How do I rearrange my parcel delivery?",
+            "Tracking shows a missed delivery attempt but I was in",
+            "Can the driver come back?",
+            "My parcel was delivered to the wrong address",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
+            See all
+            <FaArrowRightLong />
+          </button>
+        </div>
+
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out delay-800 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <MdDangerous className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">
             Damaged or missing parcel
           </h2>
-          {/* list div 1 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              My parcel arrived damaged
-            </p>
-          </div>
-
-          {/* list div 2 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              My parcel was returned to sender due to damage
-            </p>
-          </div>
-
-          {/* list div 3 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              My parcel is missing
-            </p>
-          </div>
-
-          {/* list div 4 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              Part of my order is missing
-            </p>
-          </div>
-          <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
+          {[
+            "My parcel arrived damaged",
+            "My parcel was returned to sender due to damage",
+            "My parcel is missing",
+            "Part of my order is missing",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
             See all
             <FaArrowRightLong />
           </button>
         </div>
 
-        <div className="w-96 h-auto">
-          <FaPlay className="text-4xl text-neutral-600 flex" />
-          <h2 className="font-bold text-2xl text-neutral-600 py-7">Returns</h2>
-          {/* list div 1 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              How do I return my parcel?
-            </p>
-          </div>
-
-          {/* list div 2 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              Is there a cost to return a parcel?
-            </p>
-          </div>
-
-          {/* list div 3 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              How will I know when my item has been returned?
-            </p>
-          </div>
-
-          {/* list div 4 */}
-          <div className="flex ">
-            <FaCircleDot className="text-xs" />
-            <p className="text-sm px-2 text-neutral-600">
-              Can I track my return?
-            </p>
-          </div>
-          <button className="my-5 w-28 h-12 bg-neutral-700 rounded-md flex flex-row items-center justify-center gap-1">
+        <div
+          className={`w-full max-w-sm bg-white p-6 rounded-lg shadow-md transform transition-all duration-1000 ease-in-out delay-1000 ${
+            animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <FaPlay className="text-4xl text-neutral-600" />
+          <h2 className="font-bold text-2xl text-neutral-600 py-4">Returns</h2>
+          {[
+            "How do I return my parcel?",
+            "Is there a cost to return a parcel?",
+            "How will I know when my item has been returned?",
+            "Can I track my return?",
+          ].map((item, index) => (
+            <div key={index} className="flex items-center my-2">
+              <FaCircleDot className="text-xs" />
+              <p className="text-sm px-2 text-neutral-600">{item}</p>
+            </div>
+          ))}
+          <button className="mt-5 w-full bg-neutral-700 text-white py-2 rounded-md flex items-center justify-center gap-1">
             See all
             <FaArrowRightLong />
           </button>
         </div>
       </div>
     </div>
+
+
+
+    {/*Footer  */}
+    <footer class="bg-neutral-900 text-white py-10 mt-40 lg:mt-32">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap gap-8 md:gap-16 lg:gap-8  text-center md:text-left lg:flex lg:justify-center lg:items-center">
+            {/* <!-- About Us Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">ABOUT US</h3>
+              <p class="mt-4 text-sm opacity-80">
+                We provide a portfolio of full logistic solutions which
+                includes, but is not limited to International and Domestic
+                express delivery, Freight Forwarding, Integrated Logistics
+                Solutions, Information and Document Management Solutions,
+                Warehousing, Packaging Services, Food Delivery, Agriculture
+                Logistics and E-commerce Solutions.
+              </p>
+            </div>
+
+            {/* <!-- Quick Links Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">QUICK LINKS</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    About us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Track package
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Help Centre
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* <!-- Services Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">SERVICES</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Air freight
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Customs House Brokerage
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Ocean freight
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Project Cargo
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Road and Rail
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Warehousing
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* <!-- Help Center Section --> */}
+            <div class="w-full md:w-1/4">
+              <h3 class="text-lg font-semibold text-yellow-500">HELP CENTER</h3>
+              <ul class="mt-4 space-y-2 text-sm opacity-80">
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Damaged or missing parcel
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    I'm not in
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Missed a delivery?
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Parcel returns
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Problems or complaints
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Redelivery
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-yellow-500">
+                    Tracking
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* <!-- Footer Bottom Section --> */}
+          <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm opacity-80">
+            © 2024 Courier Plus Express Delivery Service. All Rights Reserved
+          </div>
+        </div>
+      </footer>
+    </>
   );
 };
 

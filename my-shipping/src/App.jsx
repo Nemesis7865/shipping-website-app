@@ -9,7 +9,7 @@ import TrackPackage from "./nav-section/TrackPackage";
 import Services from "./nav-section/Services";
 import Home from "./nav-section/Home";
 import ContactUs from "./nav-section/ContactUs";
-import Pages from "./layout/Pages"; // Confirm correct path
+
 
 import "./app.css";
 
@@ -32,7 +32,7 @@ function App() {
         
       </div>
 
-
+     
     </BrowserRouter>
 
     
